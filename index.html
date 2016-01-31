@@ -1,0 +1,247 @@
+<html>
+<head>
+    <title>Taken King Raid Randomizer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+          crossorigin="anonymous">
+    <script type="text/javascript" src="./app.js"></script>
+</head>
+<body>
+<h1>Taken King Raid Randomizer</h1>
+<hr>
+<div class="container" id="members">
+    <h2>Enter team members:</h2>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="member-1">Member 1:</label>
+            <input id="member-1" class="form-control" type="text" placeholder="Enter name..." value=""/>
+        </div>
+        <div class="form-group">
+            <label for="member-2">Member 2:</label>
+            <input id="member-2" class="form-control" type="text" placeholder="Enter name..." value=""/>
+        </div>
+        <div class="form-group">
+            <label for="member-3">Member 3:</label>
+            <input id="member-3" class="form-control" type="text" placeholder="Enter name..." value=""/>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="member-4">Member 4:</label>
+            <input id="member-4" class="form-control" type="text" placeholder="Enter name..." value=""/>
+        </div>
+        <div class="form-group">
+            <label for="member-5">Member 5:</label>
+            <input id="member-5" class="form-control" type="text" placeholder="Enter name..." value=""/>
+        </div>
+        <div class="form-group">
+            <label for="member-6">Member 6:</label>
+            <input id="member-6" class="form-control" type="text" placeholder="Enter name..." value=""/>
+        </div>
+    </div>
+    <button onclick="generate()">Generate</button>
+</div>
+<div class="container" id="portal">
+    <h2>Portal</h2>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="portal-leftorb">Left Orb:</label>
+            <span id="portal-leftorb">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="portal-leftescort">Left Escort:</label>
+            <span id="portal-leftescort">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="portal-leftcenter">Left Center:</label>
+            <span id="portal-leftcenter">TBD</span>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="portal-rightorb">Right Orb:</label>
+            <span id="portal-rightorb">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="portal-rightescort">Right Escort:</label>
+            <span id="portal-rightescort">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="portal-rightcenter">Right Center:</label>
+            <span id="portal-rightcenter">TBD</span>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="relay">
+    <h2>Relay Race</h2>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="relay-left1">Left Side - First:</label>
+            <span id="relay-left1">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="relay-left2">Left Side - Second:</label>
+            <span id="relay-left2">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="relay-left3">Left Side - Center:</label>
+            <span id="relay-left3">TBD</span>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="relay-right1">Right Side - First:</label>
+            <span id="relay-right1">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="relay-right2">Right Side - Second:</label>
+            <span id="relay-right2">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="relay-right3">Right Side - Center:</label>
+            <span id="relay-right3">TBD</span>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="warpriest">
+    <h2>Warpriest</h2>
+    <div class="row">
+        <em>Note that due to titan bubbles, you might need to switch who is on the plate. Future versions will take this into account.</em>
+    </div>
+
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="warpriest-left-plate">Left Side - On Plate</label>
+            <span id="warpriest-left-plate">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="warpriest-left-float">Left Side</label>
+            <span id="warpriest-left-float">TBD</span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="warpriest-center-plate">Center Side - On Plate</label>
+            <span id="warpriest-center-plate">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="warpriest-center-float">Center Side</label>
+            <span id="warpriest-center-float">TBD</span>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="warpriest-right-plate">Right Side - On Plate</label>
+            <span id="warpriest-right-plate">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="warpriest-right-float">Right Side</label>
+            <span id="warpriest-right-float">TBD</span>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="golgoroth">
+    <h2>Golgoroth</h2>
+    <div class="row">
+        <em>If not doing challenge, only need positions 1 & 2.</em>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="golgoroth-1">Position 1 (first gaze pull):</label>
+            <span id="golgoroth-1">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="golgoroth-2">Position 2 (main gaze pull):</label>
+            <span id="golgoroth-2">TBD</span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="golgoroth-3">Position 3:</label>
+            <span id="golgoroth-3">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="golgoroth-4">Position 4:</label>
+            <span id="golgoroth-4">TBD</span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="golgoroth-5">Position 5:</label>
+            <span id="golgoroth-5">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="golgoroth-6">Position 6:</label>
+            <span id="golgoroth-6">TBD</span>
+        </div>
+    </div>
+</div>
+<div class="container" id="daughters">
+    <h2>Daughters of Oryx</h2>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="daughters-platform-1">Platform 1 (Back Left): </label>
+            <span id="daughters-platform-1">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="daughters-platform-2">Platform 2 (Back Right): </label>
+            <span id="daughters-platform-2">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="daughters-platform-3">Platform 3 (Front Right): </label>
+            <span id="daughters-platform-3">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="daughters-platform-4">Platform 4 (Front Left): </label>
+            <span id="daughters-platform-4">TBD</span>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="daughters-adds">Center Adds: </label>
+            <span id="daughters-adds">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="daughters-floater">Floater (Replaces whoever gets torn): </label>
+            <span id="daughters-floater">TBD</span>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="oryx">
+    <h3>Oryx</h3>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="oryx-runner">Platform Runner: </label>
+            <span id="oryx-runner">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="oryx-ogre-1">Ogre Killer (Taking orb clockwise from runner start): </label>
+            <span id="oryx-ogre-1">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="oryx-ogre-2">Ogre Killer (Taking rouge orbs): </label>
+            <span id="oryx-ogre-2">TBD</span>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="oryx-platform-1">Position 1 (Runner start plate): </label>
+            <span id="oryx-platform-1">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="oryx-platform-2">Position 2 (Counter-clockwise once from start): </label>
+            <span id="oryx-platform-2">TBD</span>
+        </div>
+        <div class="form-group">
+            <label for="oryx-platform-3">Position 3 (Counter-clockwise twice from start): </label>
+            <span id="oryx-platform-3">TBD</span>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
